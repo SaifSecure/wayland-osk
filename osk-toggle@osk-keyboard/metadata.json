@@ -1,0 +1,13 @@
+{
+  "name": "OSK Toggle",
+  "description": "Toggles the custom on-screen keyboard.",
+  "uuid": "osk-toggle@osk-keyboard",
+  "shell-version": [
+    "46",
+    "47",
+    "48",
+    "49",
+    "50"
+  ],
+  "url": ""
+}

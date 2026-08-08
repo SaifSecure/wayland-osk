@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=On-Screen Keyboard
+Comment=Virtual keyboard for Wayland (works with Chrome, Brave, Firefox, and all apps)
+Exec=/usr/bin/python3 /opt/osk-keyboard/main.py
+Icon=input-keyboard
+Type=Application
+Categories=Utility;Accessibility;
+Keywords=keyboard;virtual;onscreen;osk;wayland;
+StartupNotify=false
+Terminal=false
