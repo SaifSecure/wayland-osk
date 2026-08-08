@@ -4,7 +4,7 @@ A native, high-performance virtual keyboard designed specifically for Ubuntu Way
 
 This project solves the notorious problem of Wayland on-screen keyboards stealing focus or failing to inject keystrokes into modern applications (like Chromium-based browsers, VS Code, Slack, and Firefox). By utilizing kernel-level `uinput` event injection combined with GTK4 Wayland/XWayland focus management tricks, this keyboard guarantees that every keystroke reaches its intended target.
 
-![Keyboard Preview](https://via.placeholder.com/800x400.png?text=Wayland+OSK+Preview) <!-- Replace with actual screenshot when publishing -->
+![Keyboard Preview](./preview.png)
 
 ## Features
 
