@@ -194,36 +194,37 @@ LAYER_SYMBOLS = [
 # ARABIC
 # ============================================================
 AR_LOWER = [
-    # Row 1: Numbers
+    # Row 1: ذ + Numbers
     [
+        _char("ذ", ecodes.KEY_GRAVE),
         _char("١", ecodes.KEY_1), _char("٢", ecodes.KEY_2), _char("٣", ecodes.KEY_3),
         _char("٤", ecodes.KEY_4), _char("٥", ecodes.KEY_5), _char("٦", ecodes.KEY_6),
         _char("٧", ecodes.KEY_7), _char("٨", ecodes.KEY_8), _char("٩", ecodes.KEY_9),
         _char("٠", ecodes.KEY_0),
     ],
-    # Row 2: ض ص ث ق ف غ ع ه خ ح
+    # Row 2: ض ص ث ق ف غ ع ه خ ح ج د
     [
         _char("ض", ecodes.KEY_Q), _char("ص", ecodes.KEY_W), _char("ث", ecodes.KEY_E),
         _char("ق", ecodes.KEY_R), _char("ف", ecodes.KEY_T), _char("غ", ecodes.KEY_Y),
         _char("ع", ecodes.KEY_U), _char("ه", ecodes.KEY_I), _char("خ", ecodes.KEY_O),
-        _char("ح", ecodes.KEY_P),
+        _char("ح", ecodes.KEY_P), _char("ج", ecodes.KEY_LEFTBRACE), _char("د", ecodes.KEY_RIGHTBRACE),
     ],
-    # Row 3: ش س ي ب ل ا ت ن م ك
+    # Row 3: ش س ي ب ل ا ت ن م ك ط
     [
         _char("ش", ecodes.KEY_A), _char("س", ecodes.KEY_S), _char("ي", ecodes.KEY_D),
         _char("ب", ecodes.KEY_F), _char("ل", ecodes.KEY_G), _char("ا", ecodes.KEY_H),
         _char("ت", ecodes.KEY_J), _char("ن", ecodes.KEY_K), _char("م", ecodes.KEY_L),
-        _char("ك", ecodes.KEY_SEMICOLON),
+        _char("ك", ecodes.KEY_SEMICOLON), _char("ط", ecodes.KEY_APOSTROPHE),
     ],
-    # Row 4: ئ ء ؤ ر لا ى ة
+    # Row 4: ئ ء ؤ ر لا ى ة ظ
     [
         _layer("⇧", "upper", width=1.5),
         _char("ئ", ecodes.KEY_Z), _char("ء", ecodes.KEY_X), _char("ؤ", ecodes.KEY_C),
         _char("ر", ecodes.KEY_V), _char("لا", ecodes.KEY_B), _char("ى", ecodes.KEY_N),
-        _char("ة", ecodes.KEY_M),
+        _char("ة", ecodes.KEY_M), _char("ظ", ecodes.KEY_SLASH),
         _action("⌫", ecodes.KEY_BACKSPACE, width=1.5),
     ],
-    # Row 5
+    # Row 5: و , ز , Space
     [
         _layer("?123", "symbols", width=1.5),
         _lang("🌐", width=1.5),
