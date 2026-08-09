@@ -194,37 +194,29 @@ LAYER_SYMBOLS = [
 # ARABIC
 # ============================================================
 AR_LOWER = [
-    # Row 1: ذ + Numbers
-    [
-        _char("ذ", ecodes.KEY_GRAVE),
-        _char("1", ecodes.KEY_1), _char("2", ecodes.KEY_2), _char("3", ecodes.KEY_3),
-        _char("4", ecodes.KEY_4), _char("5", ecodes.KEY_5), _char("6", ecodes.KEY_6),
-        _char("7", ecodes.KEY_7), _char("8", ecodes.KEY_8), _char("9", ecodes.KEY_9),
-        _char("0", ecodes.KEY_0),
-    ],
-    # Row 2: ض ص ث ق ف غ ع ه خ ح ج د
+    # Row 1: ض ص ث ق ف غ ع ه خ ح ج د
     [
         _char("ض", ecodes.KEY_Q), _char("ص", ecodes.KEY_W), _char("ث", ecodes.KEY_E),
         _char("ق", ecodes.KEY_R), _char("ف", ecodes.KEY_T), _char("غ", ecodes.KEY_Y),
         _char("ع", ecodes.KEY_U), _char("ه", ecodes.KEY_I), _char("خ", ecodes.KEY_O),
         _char("ح", ecodes.KEY_P), _char("ج", ecodes.KEY_LEFTBRACE), _char("د", ecodes.KEY_RIGHTBRACE),
     ],
-    # Row 3: ش س ي ب ل ا ت ن م ك ط
+    # Row 2: ش س ي ب ل ا ت ن م ك ط
     [
         _char("ش", ecodes.KEY_A), _char("س", ecodes.KEY_S), _char("ي", ecodes.KEY_D),
         _char("ب", ecodes.KEY_F), _char("ل", ecodes.KEY_G), _char("ا", ecodes.KEY_H),
         _char("ت", ecodes.KEY_J), _char("ن", ecodes.KEY_K), _char("م", ecodes.KEY_L),
         _char("ك", ecodes.KEY_SEMICOLON), _char("ط", ecodes.KEY_APOSTROPHE),
     ],
-    # Row 4: ئ ء ؤ ر لا ى ة ظ
+    # Row 3: ئ ء ؤ ر لا ى ة ظ ذ
     [
         _layer("⇧", "upper", width=1.5),
         _char("ئ", ecodes.KEY_Z), _char("ء", ecodes.KEY_X), _char("ؤ", ecodes.KEY_C),
         _char("ر", ecodes.KEY_V), _char("لا", ecodes.KEY_B), _char("ى", ecodes.KEY_N),
-        _char("ة", ecodes.KEY_M), _char("ظ", ecodes.KEY_SLASH),
+        _char("ة", ecodes.KEY_M), _char("ظ", ecodes.KEY_SLASH), _char("ذ", ecodes.KEY_GRAVE),
         _action("⌫", ecodes.KEY_BACKSPACE, width=1.5),
     ],
-    # Row 5: و , ز , Space
+    # Row 4: و , ز , Space
     [
         _layer("?123", "symbols", width=1.5),
         _lang("🌐", width=1.5),
@@ -232,6 +224,42 @@ AR_LOWER = [
         _char("و", ecodes.KEY_COMMA),
         _space("Space", width=4.0),
         _char("ز", ecodes.KEY_DOT),
+        _action("↵", ecodes.KEY_ENTER, width=1.5),
+        _action("Esc", ecodes.KEY_ESC),
+    ],
+]
+
+AR_UPPER = [
+    # Row 1 (Shift): َ ً ُ ٌ ﻹ إ ` ÷ × ؛ < >
+    [
+        _char("َ", ecodes.KEY_Q, shift=True), _char("ً", ecodes.KEY_W, shift=True), _char("ُ", ecodes.KEY_E, shift=True),
+        _char("ٌ", ecodes.KEY_R, shift=True), _char("ﻹ", ecodes.KEY_T, shift=True), _char("إ", ecodes.KEY_Y, shift=True),
+        _char("`", ecodes.KEY_U, shift=True), _char("÷", ecodes.KEY_I, shift=True), _char("×", ecodes.KEY_O, shift=True),
+        _char("؛", ecodes.KEY_P, shift=True), _char("<", ecodes.KEY_LEFTBRACE, shift=True), _char(">", ecodes.KEY_RIGHTBRACE, shift=True),
+    ],
+    # Row 2 (Shift): ِ ٍ ] [ ﻷ أ ـ ، / : "
+    [
+        _char("ِ", ecodes.KEY_A, shift=True), _char("ٍ", ecodes.KEY_S, shift=True), _char("]", ecodes.KEY_D, shift=True),
+        _char("[", ecodes.KEY_F, shift=True), _char("ﻷ", ecodes.KEY_G, shift=True), _char("أ", ecodes.KEY_H, shift=True),
+        _char("ـ", ecodes.KEY_J, shift=True), _char("،", ecodes.KEY_K, shift=True), _char("/", ecodes.KEY_L, shift=True),
+        _char(":", ecodes.KEY_SEMICOLON, shift=True), _char('"', ecodes.KEY_APOSTROPHE, shift=True),
+    ],
+    # Row 3 (Shift): ~ ْ } { ﻵ آ ' ّ
+    [
+        _layer("⇩", "lower", width=1.5),
+        _char("~", ecodes.KEY_Z, shift=True), _char("ْ", ecodes.KEY_X, shift=True), _char("}", ecodes.KEY_C, shift=True),
+        _char("{", ecodes.KEY_V, shift=True), _char("ﻵ", ecodes.KEY_B, shift=True), _char("آ", ecodes.KEY_N, shift=True),
+        _char("'", ecodes.KEY_M, shift=True), _char("؟", ecodes.KEY_SLASH, shift=True), _char("ّ", ecodes.KEY_GRAVE, shift=True),
+        _action("⌫", ecodes.KEY_BACKSPACE, width=1.5),
+    ],
+    # Row 4: bottom row
+    [
+        _layer("?123", "symbols", width=1.5),
+        _lang("🌐", width=1.5),
+        _modifier("Ctrl", ecodes.KEY_LEFTCTRL),
+        _char(",", ecodes.KEY_COMMA, shift=True),
+        _space("Space", width=4.0),
+        _char(".", ecodes.KEY_DOT, shift=True),
         _action("↵", ecodes.KEY_ENTER, width=1.5),
         _action("Esc", ecodes.KEY_ESC),
     ],
@@ -249,7 +277,7 @@ PACKS = {
     },
     "ar": {
         "lower": AR_LOWER,
-        "upper": LAYER_UPPER,
+        "upper": AR_UPPER,
         "symbols": LAYER_SYMBOLS,
     }
 }
