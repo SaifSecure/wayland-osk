@@ -197,10 +197,10 @@ AR_LOWER = [
     # Row 1: ذ + Numbers
     [
         _char("ذ", ecodes.KEY_GRAVE),
-        _char("١", ecodes.KEY_1), _char("٢", ecodes.KEY_2), _char("٣", ecodes.KEY_3),
-        _char("٤", ecodes.KEY_4), _char("٥", ecodes.KEY_5), _char("٦", ecodes.KEY_6),
-        _char("٧", ecodes.KEY_7), _char("٨", ecodes.KEY_8), _char("٩", ecodes.KEY_9),
-        _char("٠", ecodes.KEY_0),
+        _char("1", ecodes.KEY_1), _char("2", ecodes.KEY_2), _char("3", ecodes.KEY_3),
+        _char("4", ecodes.KEY_4), _char("5", ecodes.KEY_5), _char("6", ecodes.KEY_6),
+        _char("7", ecodes.KEY_7), _char("8", ecodes.KEY_8), _char("9", ecodes.KEY_9),
+        _char("0", ecodes.KEY_0),
     ],
     # Row 2: ض ص ث ق ف غ ع ه خ ح ج د
     [
